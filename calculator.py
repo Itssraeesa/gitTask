@@ -1,4 +1,4 @@
-def add(a, b):
+ef add(a, b):
     return a + b
 
 def subtract(a, b):
@@ -12,17 +12,23 @@ def divide(a, b):
         return "Error! Division by zero."
     return a / b
 
+def power(a, b):
+    return a ** b
+
+
 def main():
     print("Simple Calculator")
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    choice = input("Enter your choice (1/2/3/4): ")
+    print("5. Power")
     
-    if choice not in ('1', '2', '3', '4'):
-        print("Invalid choice!")
-        return
+    while True:
+        choice = input("Enter your choice (1/2/3/4/5): ")
+        if choice in ('1', '2', '3', '4', '5'):
+            break
+        print("Invalid choice! Please try again.")
 
     try:
         num1 = float(input("Enter first number: "))
@@ -39,6 +45,8 @@ def main():
         print(f"Result: {multiply(num1, num2)}")
     elif choice == '4':
         print(f"Result: {divide(num1, num2)}")
+    elif choice == '5':
+        print(f"Result: {power(num1, num2)}")
 
 if __name__ == "__main__":
     main()
