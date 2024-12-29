@@ -23,12 +23,13 @@ def main():
     print("3. Multiply")
     print("4. Divide")
     print("5. Power")
-    choice = input("Enter your choice (1/2/3/4/5): ")
     
-    if choice not in ('1', '2', '3', '4', '5'):
-        print("Invalid choice!")
-        return
-
+    while True:
+        choice = input("Enter your choice (1/2/3/4/5): ")
+        if choice in ('1', '2', '3', '4', '5'):
+            break
+        print("Invalid choice! Please try again.")
+    
     try:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
