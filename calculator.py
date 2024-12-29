@@ -1,4 +1,4 @@
-ef add(a, b):
+def add(a, b):
     return a + b
 
 def subtract(a, b):
@@ -29,7 +29,7 @@ def main():
         if choice in ('1', '2', '3', '4', '5'):
             break
         print("Invalid choice! Please try again.")
-
+    
     try:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
